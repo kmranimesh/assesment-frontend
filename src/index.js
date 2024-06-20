@@ -9,12 +9,6 @@ import CustomNode3 from './nodes/custom/CustomNode3.js';
 import CustomNode4 from './nodes/custom/CustomNode4.js';
 import CustomNode5 from './nodes/custom/CustomNode5.js';
 
-import CustomNode1 from './nodes/custom/CustomNode1.js';
-import CustomNode2 from './nodes/custom/CustomNode2.js';
-import CustomNode3 from './nodes/custom/CustomNode3.js';
-import CustomNode4 from './nodes/custom/CustomNode4.js';
-import CustomNode5 from './nodes/custom/CustomNode5.js';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

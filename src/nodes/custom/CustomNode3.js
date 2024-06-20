@@ -1,6 +1,7 @@
 // /frontend/src/nodes/custom/CustomNode3.js
 import React, { useState } from 'react';
 import AbstractNode from '../AbstractNode';
+import { Handle, Position } from 'reactflow'; // Ensure Position is imported
 
 const CustomNode3 = ({ id, data }) => {
   const [checked, setChecked] = useState(data.checked || false);
@@ -36,4 +37,4 @@ const CustomNode3 = ({ id, data }) => {
   );
 };
 
-export default CustomNode3;
+export default CustomNode3; // Ensure CustomNode3 is the default export

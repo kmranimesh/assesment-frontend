@@ -1,8 +1,9 @@
 // /frontend/src/nodes/TextNode.js
 import React, { useState, useEffect } from 'react';
 import AbstractNode from './AbstractNode';
+import { Handle, Position } from 'reactflow';
 
-const TextNode = (props) => {
+const TextNode = ({ id, data }) => {
   const [text, setText] = useState('');
   const [handles, setHandles] = useState([{type: 'input', id: 'handle1'}, {type: 'output', id: 'handle2'}]);
 
@@ -21,6 +22,7 @@ const TextNode = (props) => {
 
   return (
     <AbstractNode 
+      id={id} 
       type="text" 
       content={<textarea value={text} onChange={handleChange} />}
       handles={handles}
@@ -28,4 +30,4 @@ const TextNode = (props) => {
   );
 };
 
-export default TextNode;
+export default TextNode; // Ensure TextNode is the default export
