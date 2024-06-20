@@ -1,4 +1,3 @@
-// /frontend/src/nodes/InputNode.js
 import React, { useState } from 'react';
 import AbstractNode from './AbstractNode';
 import { Handle, Position } from 'reactflow';
@@ -49,4 +48,4 @@ const InputNode = ({ id, data }) => {
   );
 };
 
-export default InputNode; // Ensure InputNode is the default export
+export default InputNode; 

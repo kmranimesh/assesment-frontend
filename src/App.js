@@ -1,4 +1,3 @@
-// /frontend/src/App.js
 import React, { useState } from 'react';
 import SubmitButton from './submit';
 import CustomNode1 from './nodes/custom/CustomNode1';

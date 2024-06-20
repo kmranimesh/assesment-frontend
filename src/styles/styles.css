@@ -1,4 +1,3 @@
-/* Base styles for all nodes */
 .node {
   border: 2px solid black;
   border-radius: 10px;
@@ -10,7 +9,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Handle styles */
 .handle {
   width: 12px;
   height: 12px;
@@ -36,7 +34,6 @@
   background: #ff6347;
 }
 
-/* Content styles */
 .content {
   padding: 10px;
   display: flex;
@@ -44,7 +41,6 @@
   gap: 10px;
 }
 
-/* Node specific styles */
 .node-input {
   background-color: #e0f7fa;
   border-color: #007bff;
@@ -70,14 +66,12 @@
   border-color: #dc3545;
 }
 
-/* Hover effects for nodes */
 .node:hover {
   border-color: #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
-/* Styling the text input */
 textarea {
   width: 100%;
   height: 100%;
@@ -94,7 +88,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Styling the input and select elements */
 input[type="text"],
 select {
   width: calc(100% - 20px);
@@ -111,7 +104,6 @@ select:focus {
   outline: none;
 }
 
-/* Labels and container styles */
 label {
   display: block;
   margin-bottom: 5px;
@@ -125,7 +117,6 @@ div {
   gap: 10px;
 }
 
-/* Custom handle positions */
 .handle.source {
   right: -6px;
 }

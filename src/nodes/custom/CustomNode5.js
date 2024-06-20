@@ -1,7 +1,6 @@
-// /frontend/src/nodes/custom/CustomNode5.js
 import React, { useState } from 'react';
 import AbstractNode from '../AbstractNode';
-import { Handle, Position } from 'reactflow'; // Ensure Position is imported
+import { Handle, Position } from 'reactflow'; 
 
 const CustomNode5 = ({ id, data }) => {
   const [selectedOption, setSelectedOption] = useState(data.selectedOption || '');
@@ -37,4 +36,4 @@ const CustomNode5 = ({ id, data }) => {
   );
 };
 
-export default CustomNode5; // Ensure CustomNode5 is the default export
+export default CustomNode5; 

@@ -1,7 +1,6 @@
-// /frontend/src/nodes/custom/CustomNode4.js
 import React, { useState } from 'react';
 import AbstractNode from '../AbstractNode';
-import { Handle, Position } from 'reactflow'; // Ensure Position is imported
+import { Handle, Position } from 'reactflow'; 
 
 const CustomNode4 = ({ id, data }) => {
   const [number, setNumber] = useState(data.number || 0);
@@ -37,4 +36,4 @@ const CustomNode4 = ({ id, data }) => {
   );
 };
 
-export default CustomNode4; // Ensure CustomNode4 is the default export
+export default CustomNode4; 

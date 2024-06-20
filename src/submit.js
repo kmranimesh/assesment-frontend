@@ -1,10 +1,9 @@
-// /frontend/src/submit.js
 import React from 'react';
 import './styles/submit.css';
 
 const submitPipeline = async (nodes, edges) => {
   const payload = { nodes, edges };
-  console.log("Submitting pipeline with payload:", payload); // Log payload to verify structure
+  console.log("Submitting pipeline with payload:", payload); 
 
   try {
     const response = await fetch('http://localhost:8000/pipelines/parse', {

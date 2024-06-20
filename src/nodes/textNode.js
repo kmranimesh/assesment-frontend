@@ -9,8 +9,8 @@ const TextNode = ({ id, data }) => {
 
   useEffect(() => {
     const textLength = text.length;
-    const width = Math.max(200, textLength * 8); // Adjust width based on text length
-    const height = Math.max(80, Math.ceil(textLength / 20) * 20); // Adjust height based on text length
+    const width = Math.max(200, textLength * 8); 
+    const height = Math.max(80, Math.ceil(textLength / 20) * 20); 
     setSize({ width, height });
   }, [text]);
 

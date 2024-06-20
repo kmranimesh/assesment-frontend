@@ -1,4 +1,3 @@
-// /frontend/src/nodes/LLMNode.js
 import React, { useState } from 'react';
 import AbstractNode from './AbstractNode';
 import { Handle, Position } from 'reactflow';
@@ -37,4 +36,4 @@ const LLMNode = ({ id, data }) => {
   );
 };
 
-export default LLMNode; // Ensure LLMNode is the default export
+export default LLMNode; 

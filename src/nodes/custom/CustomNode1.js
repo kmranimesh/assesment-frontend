@@ -1,7 +1,6 @@
-// /frontend/src/nodes/custom/CustomNode1.js
 import React, { useState } from 'react';
 import AbstractNode from '../AbstractNode';
-import { Handle, Position } from 'reactflow'; // Ensure Position is imported
+import { Handle, Position } from 'reactflow'; 
 
 const CustomNode1 = ({ id, data }) => {
   const [value, setValue] = useState(data.value || '');
@@ -37,4 +36,4 @@ const CustomNode1 = ({ id, data }) => {
   );
 };
 
-export default CustomNode1; // Ensure CustomNode1 is the default export
+export default CustomNode1; 

@@ -1,4 +1,3 @@
-// /frontend/src/nodes/OutputNode.js
 import React from 'react';
 import AbstractNode from './AbstractNode';
 import { Handle, Position } from 'reactflow';
@@ -24,4 +23,4 @@ const OutputNode = ({ id, data }) => {
   );
 };
 
-export default OutputNode; // Ensure OutputNode is the default export
+export default OutputNode; 
