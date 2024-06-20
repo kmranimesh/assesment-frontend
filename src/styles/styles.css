@@ -1,26 +1,141 @@
+/* Base styles for all nodes */
 .node {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    position: relative;
-  }
-  
-  .handle {
-    width: 10px;
-    height: 10px;
-    background: #000;
-    border-radius: 50%;
-    position: absolute;
-  }
-  
-  .content {
-    padding: 10px;
-  }
-  
-  .node-input { background-color: #e0f7fa; }
-  .node-output { background-color: #ffe0b2; }
-  .node-llm { background-color: #d1c4e9; }
-  .node-text { background-color: #c8e6c9; }
-  .node-custom { background-color: #f8bbd0; }
-  
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Handle styles */
+.handle {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  transition: background 0.3s ease;
+}
+
+.handle.source {
+  background: #007bff;
+}
+
+.handle.target {
+  background: #28a745;
+}
+
+.handle.variable {
+  background: #ffc107;
+}
+
+.handle:hover {
+  background: #ff6347;
+}
+
+/* Content styles */
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Node specific styles */
+.node-input {
+  background-color: #e0f7fa;
+  border-color: #007bff;
+}
+
+.node-output {
+  background-color: #ffe0b2;
+  border-color: #ffc107;
+}
+
+.node-llm {
+  background-color: #d1c4e9;
+  border-color: #6f42c1;
+}
+
+.node-text {
+  background-color: #c8e6c9;
+  border-color: #28a745;
+}
+
+.node-custom {
+  background-color: #f8bbd0;
+  border-color: #dc3545;
+}
+
+/* Hover effects for nodes */
+.node:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Styling the text input */
+textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Styling the input and select elements */
+input[type="text"],
+select {
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Labels and container styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Custom handle positions */
+.handle.source {
+  right: -6px;
+}
+
+.handle.target {
+  left: -6px;
+}
+
+.handle.variable {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
