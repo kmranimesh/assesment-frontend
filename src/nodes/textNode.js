@@ -1,35 +1,31 @@
-// textNode.js
+// /frontend/src/nodes/TextNode.js
+import React, { useState, useEffect } from 'react';
+import AbstractNode from './AbstractNode';
 
-import { useState } from 'react';
-import { Handle, Position } from 'reactflow';
+const TextNode = (props) => {
+  const [text, setText] = useState('');
+  const [handles, setHandles] = useState([{type: 'input', id: 'handle1'}, {type: 'output', id: 'handle2'}]);
 
-export const TextNode = ({ id, data }) => {
-  const [currText, setCurrText] = useState(data?.text || '{{input}}');
+  const handleChange = (e) => {
+    const newText = e.target.value;
+    setText(newText);
 
-  const handleTextChange = (e) => {
-    setCurrText(e.target.value);
+    const regex = /{{(.*?)}}/g;
+    const newHandles = [...handles];
+    let match;
+    while ((match = regex.exec(newText)) !== null) {
+      newHandles.push({ type: 'variable', id: match[1] });
+    }
+    setHandles(newHandles);
   };
 
   return (
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
-      <div>
-        <span>Text</span>
-      </div>
-      <div>
-        <label>
-          Text:
-          <input 
-            type="text" 
-            value={currText} 
-            onChange={handleTextChange} 
-          />
-        </label>
-      </div>
-      <Handle
-        type="source"
-        position={Position.Right}
-        id={`${id}-output`}
-      />
-    </div>
+    <AbstractNode 
+      type="text" 
+      content={<textarea value={text} onChange={handleChange} />}
+      handles={handles}
+    />
   );
-}
+};
+
+export default TextNode;

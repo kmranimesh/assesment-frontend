@@ -1,16 +1,16 @@
-// /frontend/src/nodes/InputNode.js
+// /frontend/src/nodes/CustomNode.js
 import React from 'react';
 import AbstractNode from './AbstractNode';
 
-const InputNode = (props) => {
+const CustomNode = (props) => {
   return (
     <AbstractNode 
-      type="input" 
-      content={<div>Input Content</div>} 
+      type="custom" 
+      content={<div>Custom Content</div>} 
       handles={[{type: 'input', id: 'handle1'}, {type: 'output', id: 'handle2'}]}
       onChange={props.onChange}
     />
   );
 };
 
-export default InputNode;
+export default CustomNode;
