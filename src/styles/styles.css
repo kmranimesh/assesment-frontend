@@ -1,0 +1,26 @@
+.node {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .handle {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .content {
+    padding: 10px;
+  }
+  
+  .node-input { background-color: #e0f7fa; }
+  .node-output { background-color: #ffe0b2; }
+  .node-llm { background-color: #d1c4e9; }
+  .node-text { background-color: #c8e6c9; }
+  .node-custom { background-color: #f8bbd0; }
+  
